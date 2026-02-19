@@ -13,14 +13,14 @@ export default function Footer() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/YOUR_LINKEDIN"
+            href="https://linkedin.com/in/will-upright-1314053b1"
             className="hover:text-black"
             target="_blank"
           >
             LinkedIn
           </a>
           <a
-            href="mailto:youremail@example.com"
+            href="mailto:w.e.upright@gmail.com"
             className="hover:text-black"
           >
             Email

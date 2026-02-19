@@ -26,11 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="pt-16">
-        <Navbar />
-        {children}
-        <Footer />
+    <html lang="en" className="h-full">
+      <body
+        className="pt-16"
+      >
+        <Navbar /> 
+        {children} 
+        <Footer /> 
       </body>
     </html>
   );
