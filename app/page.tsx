@@ -2,59 +2,129 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-gray-900">
-      <section className="flex flex-col items-center justify-center h-screen text-center max-w-5xl mx-auto px-6">
-        <h1 className="text-5xl font-bold mb-4">
+    <main className="min-h-screen bg-neutral-50 text-gray-900">
+      <section className="flex flex-col items-center justify-center min-h-screen text-center max-w-5xl mx-auto px-6">
+        <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
           Hi, I’m Will 👋
         </h1>
 
-        <p className="text-xl text-gray-600 max-w-xl">
-          I’m a student developer who enjoys building apps and learning how real products are made.
+        <p className="text-2xl text-gray-700 mb-6 max-w-3xl">
+          Computer Science student focused on building practical, real-world applications
+          using Java, Python, and modern web technologies.
         </p>
+
+        <p className="text-lg text-gray-600 mb-10">
+          Seeking a software engineering internship for Summer 2026.
+        </p>
+
+        <div className="flex gap-4">
+          <a
+            href="#projects"
+            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+          >
+            View My Projects
+          </a>
+
+          <a
+            href="#contact"
+            className="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 transition"
+          >
+            Contact Me
+          </a>
+          <a
+            href="https://github.com/willupright"
+            className="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 transition"
+            target="_blank"
+          >
+            Github
+          </a>
+        </div>
       </section>
       <section className="flex flex-col items-center justify-center text-center max-w-5xl mx-auto px-6 py-24" id="projects">
         <h2 className="text-3xl font-bold mb-10">Projects</h2>
 
-        <div className="grid gap-8 md:grid-cols-2">
-          <div className="border rounded-lg p-6 hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold mb-2">Project One</h3>
-            <p className="text-gray-600 mb-4">
-              A short description of what this app does and what problem it solves.
+        <div className="flex flex-col gap-16 w-full items-center justify-center text-center">
+          {/* Project 1 */}
+          <div className="border rounded-xl p-8 hover:shadow-lg transition bg-white">
+            <h3 className="text-2xl font-semibold mb-4">
+              Virginia Flora & Fauna Database
+            </h3>
+
+            <p className="text-gray-600 mb-6 max-w-3xl">
+              Full-stack biodiversity database built with Flask-AppBuilder and PostgreSQL.
+              Screenshots shown due to restricted university database access.
             </p>
 
-            <p className="text-sm text-gray-500 mb-4">
-              Tech: React, Next.js, Tailwind
+            <p className="text-sm text-gray-500 mb-8">
+              Tech: Python, Flask-AppBuilder, PostgreSQL, HTML, CSS
             </p>
-
-            <div className="flex gap-4">
-              <a href="#" className="text-blue-600 hover:underline">
-                Live Demo
-              </a>
-              <a href="#" className="text-blue-600 hover:underline">
-                GitHub
-              </a>
+{/* flex flex-col gap-16 w-full  grid gap-6 md:grid-cols-2 */}
+            <div className="flex flex-col gap-2 w-full items-center justify-center text-center">
+              <Image
+                src="/projects/landing-page.png"
+                width={1000}
+                height={550}
+                alt="Virginia Flora & Fauna Database Home Page"
+                className="rounded-lg border-2 border-solid border-gray-300"
+              />
+              <p className="text-sm text-gray-500 mb-8">
+                This is the website's landing page, which gives the user easy access to the search functionality with "START EXPLORING" and "SELECT YOUR COUNTY".
+                As well as an easy way to submit a new observation for returning users with "... Add an Observation".
+              </p>
+              <Image
+                src="/projects/species1.png"
+                width={1000}
+                height={550}
+                alt="Virginia Flora & Fauna Database Species Page"
+                className="rounded-lg border-2 border-solid border-gray-300"
+              />
+              <p className="text-sm text-gray-500 mb-8">
+                When the user clicks "START EXPLORING", they are taken to this page, which shows all the species in the database. They can then search the database using the search button at the top left.
+              </p>
+              <Image
+                src="/projects/species-search.png"
+                width={1000}
+                height={550}
+                alt="Virginia Flora & Fauna Database Search Results"
+                className="rounded-lg border-2 border-solid border-gray-300"
+              />
+              <p className="text-sm text-gray-500 mb-8">
+                The user can use many different filters to narrow down their search, such as "Common Name", "Scientific Name", "County", etc. For this example, I searched for species where their common name contains "White".
+              </p>
+              <Image
+                src="/projects/search-result.png"
+                width={2000}
+                height={550}
+                alt="Virginia Flora & Fauna Database Home Page"
+                className="rounded-lg border-2 border-solid border-gray-300"
+              />
+              <p className="text-sm text-gray-500 mb-8">
+                After clicking the search button, the data was queried and the results are displayed to the user.
+              </p>
+              <Image
+                src="/projects/adding-observation.png"
+                width={1000}
+                height={550}
+                alt="Virginia Flora & Fauna Database Species Page"
+                className="rounded-lg border-2 border-solid border-gray-300"
+              />
+              <p className="text-sm text-gray-500 mb-8">
+                This is the form returning users can use to submit a new observation. The user can fill out the form with the species they observed, the county they observed it in, etc. After submitting the form, the data is added to the database and can be searched for by other users.
+              </p>
+              <Image
+                src="/projects/observation-confirmed.png"
+                width={2000}
+                height={550}
+                alt="Virginia Flora & Fauna Database Species Page"
+                className="rounded-lg border-2 border-solid border-gray-300"
+              />
+              <p className="text-sm text-gray-500 mb-8">
+                Here you can see the observation was successfully added to the database and is now searchable by other users. The user can also click on the observation to view more details about it.
+              </p>
             </div>
           </div>
 
-          <div className="border rounded-lg p-6 hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold mb-2">Project Two</h3>
-            <p className="text-gray-600 mb-4">
-              A short description of what this app does and what problem it solves.
-            </p>
 
-            <p className="text-sm text-gray-500 mb-4">
-              Tech: React, Next.js, Tailwind
-            </p>
-
-            <div className="flex gap-4">
-              <a href="#" className="text-blue-600 hover:underline">
-                Live Demo
-              </a>
-              <a href="#" className="text-blue-600 hover:underline">
-                GitHub
-              </a>
-            </div>
-          </div>
         </div>
       </section>
       <section className="flex flex-col items-center max-w-5xl mx-auto px-6 py-24" id="about">
@@ -62,13 +132,13 @@ export default function Home() {
           About
         </h1>
         <p className="text-xl text-gray-600 max-w-4xl leading-relaxed text-left">
-          I’m a Computer Science student at James Madison University who enjoys building practical applications and learning how real software systems are designed. 
-          I have experience with Java, Python, and web technologies through academic projects focused on problem-solving, data structures, and full-stack development.
+          Computer Science student at James Madison University with experience in Java, Python, C, and full-stack web development. 
+          Strong background in data structures, algorithms, and database systems, with hands-on project experience building web and data-driven applications.
         </p>
         <br />
         <p className="text-xl text-gray-600 max-w-4xl leading-relaxed text-left">
-          I’ve worked on both individual and team-based projects using Agile practices, and I value writing clean, reliable code. 
-          I’m currently seeking a computer science internship where I can apply my skills, continue learning, and gain hands-on industry experience.
+          I bring a strong work ethic, teamwork, and attention to detail from previous technical and customer-facing roles. 
+          Currently seeking a software engineering or computer science internship to gain real-world experience and contribute to impactful software projects.
         </p>
       </section>
       <section
