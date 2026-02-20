@@ -5,6 +5,9 @@ export default function Navbar() {
         <span className="text-gray-900 font-bold text-lg">Will Upright</span>
 
         <div className="flex gap-6 text-sm">
+          <a href="#hero" className="text-gray-600 hover:text-black">
+            Home
+          </a>
           <a href="#projects" className="text-gray-600 hover:text-black">
             Projects
           </a>
