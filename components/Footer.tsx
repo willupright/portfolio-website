@@ -6,7 +6,7 @@ export default function Footer() {
 
         <div className="flex gap-4">
           <a
-            href="https://github.com/YOUR_GITHUB"
+            href="https://github.com/willupright"
             className="hover:text-black"
             target="_blank"
           >
