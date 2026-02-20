@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="min-h-screen bg-neutral-50 text-gray-900">
-      <section className="flex flex-col items-center justify-center min-h-screen text-center max-w-5xl mx-auto px-6">
+      <section className="flex flex-col items-center justify-center min-h-screen text-center max-w-5xl mx-auto px-6" id = "hero">
         <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
           Hi, I’m Will 👋
         </h1>
