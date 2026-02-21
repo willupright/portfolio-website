@@ -1,5 +1,10 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "Will Upright - Portfolio",
+  description: "Welcome to my portfolio website! I'm a Computer Science student passionate about building practical applications using Java, Python, and modern web technologies. Explore my projects and get in touch!",
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-neutral-50 text-gray-900">
