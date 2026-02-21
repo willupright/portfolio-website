@@ -50,15 +50,28 @@ export default function Home() {
               Virginia Flora & Fauna Database
             </h3>
 
-            <p className="text-gray-600 mb-6 max-w-3xl">
-              Full-stack biodiversity database built with Flask-AppBuilder and PostgreSQL.
-              Screenshots shown due to restricted university database access.
+            <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
+              A full-stack biodiversity web application for storing and exploring species and
+              observation data across Virginia. Built with Flask-AppBuilder and PostgreSQL,
+              the platform enables users to browse species, apply filters, and
+              submit new observations through a structured workflow.
+              <br /><br />
+              Live access is restricted due to university database permissions; screenshots
+              demonstrate some of the user experience from search to data persistence.
             </p>
-
             <p className="text-sm text-gray-500 mb-8">
               Tech: Python, Flask-AppBuilder, PostgreSQL, HTML, CSS
             </p>
-{/* flex flex-col gap-16 w-full  grid gap-6 md:grid-cols-2 */}
+            <div className="flex gap-4 justify-center mb-6">
+              <a
+                href="https://github.com/willupright/virginia-fauna-and-flora"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 border rounded-lg font-medium hover:bg-gray-100 transition"
+              >
+                View Code
+              </a>
+            </div>
             <div className="flex flex-col gap-2 w-full items-center justify-center text-center">
               <Image
                 src="/projects/landing-page.png"
@@ -85,7 +98,7 @@ export default function Home() {
                 src="/projects/species-search.png"
                 width={1000}
                 height={550}
-                alt="Virginia Flora & Fauna Database Search Results"
+                alt="Virginia Flora & Fauna Database Species Search View"
                 className="rounded-lg border-2 border-solid border-gray-300"
               />
               <p className="text-sm text-gray-500 mb-8">
@@ -95,7 +108,7 @@ export default function Home() {
                 src="/projects/search-result.png"
                 width={2000}
                 height={550}
-                alt="Virginia Flora & Fauna Database Home Page"
+                alt="Virginia Flora & Fauna Database Search Results"
                 className="rounded-lg border-2 border-solid border-gray-300"
               />
               <p className="text-sm text-gray-500 mb-8">
@@ -105,7 +118,7 @@ export default function Home() {
                 src="/projects/adding-observation.png"
                 width={1000}
                 height={550}
-                alt="Virginia Flora & Fauna Database Species Page"
+                alt="Virginia Flora & Fauna Database Adding Observation Form"
                 className="rounded-lg border-2 border-solid border-gray-300"
               />
               <p className="text-sm text-gray-500 mb-8">
@@ -115,11 +128,21 @@ export default function Home() {
                 src="/projects/observation-confirmed.png"
                 width={2000}
                 height={550}
-                alt="Virginia Flora & Fauna Database Species Page"
+                alt="Virginia Flora & Fauna Database Observation Confirmed"
                 className="rounded-lg border-2 border-solid border-gray-300"
               />
               <p className="text-sm text-gray-500 mb-8">
                 Here you can see the observation was successfully added to the database and is now searchable by other users. The user can also click on the observation to view more details about it.
+              </p>
+              <Image
+                src="/projects/diagram.png"
+                width={2000}
+                height={550}
+                alt="Virginia Flora & Fauna Database ER Diagram"
+                className="rounded-lg border-2 border-solid border-gray-300"
+              />
+              <p className="text-sm text-gray-500 mb-8">
+                Here is the databases ER diagram, which shows the relationships between the different tables in the database.
               </p>
             </div>
           </div>
