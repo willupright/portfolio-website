@@ -19,7 +19,7 @@ export default function Home() {
         </p>
 
         <p className="text-lg text-gray-600 mb-10">
-          Seeking a software engineering internship for Summer 2026.
+          Seeking a software engineering position.
         </p>
 
         <div className="flex gap-4">
